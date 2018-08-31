@@ -17,3 +17,4 @@ int main(){
    	if (N>1) binario(N/2);
    	printf("%d",N%2);
    }  
+//
