@@ -11,7 +11,6 @@ int main()
 {
    
     int numero=0;
-    
     int binarios(int); 
     int hexadecimales(int);
    
