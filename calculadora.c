@@ -123,7 +123,7 @@ void hex(int numero){// Funcion Conversor
 
 int binarioA10(){// Funcion Conversor
 	char x[100];
-	printf("Ingrese un numero binario\n");
+	printf("\n\n\t Ingrese un numero binario ");
 	fflush(stdin);
 	gets(x);
 	int i = 0, y = 0;
@@ -145,7 +145,7 @@ int binarioA10(){// Funcion Conversor
 	}
 	if (y == -1)
 	{
-		printf("El numero no es binario\n");
+		printf("\n\n\t El numero no es binario ");
 	}
 	else
 	{
