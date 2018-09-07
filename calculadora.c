@@ -18,14 +18,14 @@ int main(){
 			case 1 : binario(); break;//Decimal a Binario
 			case 2 : octal(leernumero()); break; //Decimal a Octal
 			case 3 : hex(leernumero()); break;//Decimal a Hexadecimal
-			case 4 : printf("Decimal: %i",binarioA10());break;//Binario a Decimal
+			case 4 : printf("\n\n\t Decimal: %i",binarioA10());break;//Binario a Decimal
 			case 5 : octal(binarioA10());break;//Binario a Octal
 			case 6 : hex(binarioA10());break;//Binario a Hexadecimal
-			case 9 : goto salir;//Finaliza directamente el programa
+			case 7 : goto salir;//Finaliza directamente el programa
 			default : printf("\nOpcion no valida");
 			
 		}
-		printf("\n\n\t%cDesea convertir otro numero?  \n\n\t1- Si 2- No \n\n\tOpcion: ",168);
+		printf("\n\n\t %cDesea convertir otro numero?  \n\n\t 1- Si 2- No \n\n\t Opcion: ",168);
 		scanf("%d",&j);
 	}
 	salir:
@@ -42,14 +42,14 @@ int leernumero(){//Funcion de lectura de numero
 int menu(){//Opciones del Menu
 	int opcion, x =0;
 	printf("\n\n\t Conversor");
-	printf("\n\n\t Digite la opcion de su preferencia");
-	printf("\n\n\t 1.Entrada Decimal-Salida Binario");
-	printf("\n\n\t 2.Entrada Decimal-Salida Octal");
-	printf("\n\n\t 3.Entrada Decimal-Salida Hexadecimal");
-	printf("\n\n\t 4.Entrada Binario-Salida Decimal");
-	printf("\n\n\t 5.Entrada Binario-Salida Octal");
-	printf("\n\n\t 6.Entrada Binario-Salida Hexadecimal");
-	printf("\n\n\t 9.Salir ");
+	printf("\n\n\t Digite la opcion de su preferencia ");
+	printf("\n\n\t 1.Entrada Decimal-Salida Binario ");
+	printf("\n\n\t 2.Entrada Decimal-Salida Octal ");
+	printf("\n\n\t 3.Entrada Decimal-Salida Hexadecimal ");
+	printf("\n\n\t 4.Entrada Binario-Salida Decimal ");
+	printf("\n\n\t 5.Entrada Binario-Salida Octal ");
+	printf("\n\n\t 6.Entrada Binario-Salida Hexadecimal ");
+	printf("\n\n\t 7.Salir ");
 	printf("\n\n\t Opcion: ");
 	scanf("%d",&x);
 	return x;
