@@ -18,7 +18,7 @@ int main(){
 			case 1 : binario(); break;//Decimal a Binario
 			case 2 : octal(leernumero()); break; //Decimal a Octal
 			case 3 : hex(leernumero()); break;//Decimal a Hexadecimal
-			case 4 : printf("Decimal: %i",binarioA10);break;//Binario a Decimal
+			case 4 : printf("Decimal: %i",binarioA10());break;//Binario a Decimal
 			case 5 : octal(binarioA10());break;//Binario a Octal
 			case 6 : hex(binarioA10());break;//Binario a Hexadecimal
 			case 9 : goto salir;//Finaliza directamente el programa
@@ -153,4 +153,3 @@ int binarioA10(){// Funcion Conversor
 	}
 	
 }
-
