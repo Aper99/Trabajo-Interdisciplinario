@@ -13,19 +13,17 @@ int binarioA10();
 int main(){
 	int j = 1;
 	while(j ==1){//Condicion para repetir el proceso
+		int num,x;
 		int opcion = menu();//Muestra las opciones
+		
 		switch(opcion){
-			case 1 : binario(); break;//Decimal a Binario
-			case 2 : octal(leernumero()); break; //Decimal a Octal
-			case 3 : hex(leernumero()); break;//Decimal a Hexadecimal
-			case 4 : printf("\n\n\t Decimal: %i",binarioA10());break;//Binario a Decimal
-			case 5 : octal(binarioA10());break;//Binario a Octal
-			case 6 : hex(binarioA10());break;//Binario a Hexadecimal
-			case 7 : goto salir;//Finaliza directamente el programa
+			case 1 : num = leernumero(); binario(num); octal(num); hex(num); break;//Entrada decimal
+			case 2 : x = binarioA10(); octal(x); hex(x); break;//Entrada Binario
+			case 3 : goto salir;//Finaliza directamente el programa
 			default : printf("\nOpcion no valida");
 			
 		}
-		printf("\n\n\t %cDesea convertir otro numero?  \n\n\t 1- Si 2- No \n\n\t Opcion: ",168);
+		printf("\n\n\n\n\t %cDesea convertir otro numero?  \n\n\t 1- Si 2- No \n\n\t Opcion: ",168);
 		scanf("%d",&j);
 	}
 	salir:
@@ -42,22 +40,17 @@ int leernumero(){//Funcion de lectura de numero
 int menu(){//Opciones del Menu
 	int opcion, x =0;
 	printf("\n\n\t Conversor");
-	printf("\n\n\t Digite la opcion de su preferencia ");
-	printf("\n\n\t 1.Entrada Decimal-Salida Binario ");
-	printf("\n\n\t 2.Entrada Decimal-Salida Octal ");
-	printf("\n\n\t 3.Entrada Decimal-Salida Hexadecimal ");
-	printf("\n\n\t 4.Entrada Binario-Salida Decimal ");
-	printf("\n\n\t 5.Entrada Binario-Salida Octal ");
-	printf("\n\n\t 6.Entrada Binario-Salida Hexadecimal ");
-	printf("\n\n\t 7.Salir ");
+	printf("\n\n\t Seleccione la base ");
+	printf("\n\n\t 1.Entrada Decimal ");
+	printf("\n\n\t 2.Entrada Binario");
+	printf("\n\n\t 3.Salir ");
 	printf("\n\n\t Opcion: ");
 	scanf("%d",&x);
 	return x;
 }
-void binario(){// Funcion Conversor
-	int numero,c = 0;
+void binario(int numero){// Funcion Conversor
+	int c = 0;
 	char binario[2]={'0','1'};
-	numero=leernumero();
     while (numero!=0){
          binario[c]=numero % 2;
           numero=numero / 2;
@@ -149,7 +142,9 @@ int binarioA10(){// Funcion Conversor
 	}
 	else
 	{
+		printf("\n\n\t Decimal: %d",y);
 		return y;	
 	}
 	
 }
+
