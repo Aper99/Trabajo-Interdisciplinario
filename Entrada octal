@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main(){
+	int exp=1;
+	int decimal=1;
+	int octal;
+	int num=0;
+	printf("\n\t\t Escribe un numero en octal ");
+	scanf("%d",&octal);
+	decimal=0;
+	while (octal>0){
+		num=octal%10;
+		decimal=decimal+(num*exp);
+		octal=octal/10;
+		exp=exp*8;
+	}
+		printf("\n\t\t El numero en decimal es %d", decimal);
+	return(0);}
